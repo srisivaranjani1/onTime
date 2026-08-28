@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./Dashboard.css";
+const API_URL = import.meta.env.VITE_API_URL;
 
 const Dashboard = () => {
   const [user, setUser] = useState(null);
@@ -14,12 +15,12 @@ const Dashboard = () => {
 
   const fetchUserAndMeetings = async () => {
     try {
-      const userRes = await axios.get("http://localhost:8080/api/users/me", {
+      const userRes = await axios.get(`${API_URL}/api/users/me`, {
         withCredentials: true,
       });
       setUser(userRes.data);
 
-      const meetingRes = await axios.get("http://localhost:8080/api/meetings/my", {
+      const meetingRes = await axios.get(`${API_URL}/api/meetings/my`, {
         withCredentials: true,
       });
       setMeetings(meetingRes.data);
@@ -30,7 +31,7 @@ const Dashboard = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:8080/api/meetings/${id}`, {
+      await axios.delete(`${API_URL}/api/meetings/${id}`, {
         withCredentials: true,
       });
       setMeetings(meetings.filter((m) => m.id !== id));
@@ -48,7 +49,7 @@ const Dashboard = () => {
     e.preventDefault();
     try {
       await axios.put(
-        `http://localhost:8080/api/meetings/${editMeeting}`,
+        `${API_URL}/api/meetings/${editMeeting}`,
         {
           title: formData.title,
           description: formData.description,

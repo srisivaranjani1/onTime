@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import "./MeetingScheduler.css";
+const API_URL = import.meta.env.VITE_API_URL;
 
 const MeetingScheduler = () => {
   const [meeting, setMeeting] = useState({
@@ -26,7 +27,7 @@ const MeetingScheduler = () => {
 
     try {
       await axios.post(
-        "http://localhost:8080/api/meetings/create",
+        `${API_URL}/api/meetings/create`,
         meeting,
         { withCredentials: true }
       );

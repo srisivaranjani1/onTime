@@ -16,6 +16,7 @@ import {
 
 import { Bar, Line } from "react-chartjs-2";
 import "./Analytics.css";
+const API_URL = import.meta.env.VITE_API_URL;
 
 ChartJS.register(
   CategoryScale,
@@ -43,7 +44,7 @@ const Analytics = () => {
       setError("");
 
       const response = await axios.get(
-        "http://localhost:8080/api/todo/all-with-todos",
+        `${API_URL}/api/todo/all-with-todos`,
         {
           withCredentials: true,
         }
@@ -391,9 +392,7 @@ const Analytics = () => {
 
         </div>
 
-        {/* -------------------------------- */}
-        {/* BAR CHART */}
-        {/* -------------------------------- */}
+
 
         <div className="chart-card">
 
