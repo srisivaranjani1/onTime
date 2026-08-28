@@ -1,0 +1,143 @@
+/* .landing-wrapper {
+  height: 100vh;
+  background-color: white;
+  color: #ff6600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.landing-content {
+  max-width: 600px;
+  animation: fadeIn 1s ease-in;
+}
+
+.title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  color: #ff6600;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.cta-button {
+  padding: 12px 28px;
+  font-size: 1rem;
+  background-color: #ff6600;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #e65c00;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+} */
+
+
+.landing-wrapper {
+  height: 100vh;
+  background: linear-gradient(to right, #0f0f0f, #1c1c1c);
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.landing-content {
+  max-width: 600px;
+  animation: fadeIn 1s ease-in;
+}
+
+.title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.highlight {
+  color: #ff6600;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #cccccc;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.cta-button {
+  padding: 12px 28px;
+  font-size: 1rem;
+  background-color: #ff6600;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #e65c00;
+}
+
+.cta-button.secondary {
+  background-color: transparent;
+  border: 2px solid #ff6600;
+  color: #ff6600;
+}
+
+.cta-button.secondary:hover {
+  background-color: #ff6600;
+  color: white;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}/* LandingPage.css */
+.landing-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #000000, #1a1a1a);
+  color: white;
+  overflow: hidden;
+}

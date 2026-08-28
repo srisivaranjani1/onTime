@@ -1,0 +1,495 @@
+/*.dashboard-wrapper {
+  display: flex;
+  min-height: 100vh;
+  background: linear-gradient(to right, #0f0f0f, #1c1c1c);
+  color: white;
+  overflow-x: hidden;
+
+}
+
+
+.sidebar {
+  width: 250px;
+  min-height: 100vh;
+  background-color: #111;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.dashboard-content {
+  flex: 1;
+  margin-left: 250px;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  animation: fadeIn 0.8s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dashboard-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.highlight {
+  color: #ff6600;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: #bbbbbb;
+}
+
+.table-wrapper {
+  width: 100%;
+  max-width: 960px;
+  overflow-x: auto;
+}
+
+.meeting-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(255, 102, 0, 0.15);
+  overflow: hidden;
+}
+
+.meeting-table th,
+.meeting-table td {
+  padding: 12px 16px;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+.meeting-table th {
+  background-color: #2b2b2b;
+  color: #ff6600;
+  font-weight: 600;
+}
+
+.meeting-table td {
+  color: #e0e0e0;
+  border-bottom: 1px solid #333;
+}
+
+.meeting-table tr:hover {
+  background-color: #2a2a2a;
+}
+
+
+.edit-btn,
+.delete-btn {
+  margin-right: 6px;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.edit-btn {
+  background-color:#ff6600;
+  color: #000;
+}
+
+.delete-btn {
+  background-color:#ff6600;
+  color: black;
+}
+
+.save-btn {
+  background-color: #ff6600;
+  color: white;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 4px;
+}
+
+.cancel-btn {
+  background-color: #888;
+  color: white;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 4px;
+}
+
+.edit-popup {
+  margin-top: 30px;
+  background-color: #292929;
+  padding: 20px;
+  max-width: 400px;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(255, 102, 0, 0.3);
+}
+
+.edit-popup h3 {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.edit-popup input,
+.edit-popup textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: none;
+  border-radius: 5px;
+  background-color: #1f1f1f;
+  color: #fff;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.no-meetings {
+  text-align: center;
+  color: #aaa;
+  margin-top: 40px;
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@media (max-width: 768px) {
+  .dashboard-content {
+    margin-left: 0;
+    padding: 30px 15px;
+  }
+
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+}*/
+
+.dashboard-wrapper {
+  width: 100%;
+  min-height: 100vh;
+
+  background: linear-gradient(to right, #0f0f0f, #1c1c1c);
+  color: white;
+
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+
+/* =========================================
+   DASHBOARD CONTENT
+   ========================================= */
+
+.dashboard-content {
+  width: 100%;
+  max-width: 1100px;
+
+  margin: 0 auto;
+
+  padding: 40px 20px;
+
+  box-sizing: border-box;
+
+  animation: fadeIn 0.8s ease-in-out;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+.dashboard-header {
+  width: 100%;
+
+  text-align: center;
+
+  margin-bottom: 40px;
+}
+
+
+.title {
+  font-size: 2.5rem;
+
+  margin-bottom: 0.5rem;
+
+  font-weight: 600;
+
+  color: #ffffff;
+}
+
+
+.highlight {
+  color: #ff6600;
+}
+
+
+.subtitle {
+  font-size: 1.25rem;
+
+  color: #bbbbbb;
+}
+
+
+/* =========================================
+   TABLE
+   ========================================= */
+
+.table-wrapper {
+  width: 100%;
+
+  max-width: 960px;
+
+  overflow-x: auto;
+}
+
+
+.meeting-table {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  background-color: #1e1e1e;
+
+  border-radius: 10px;
+
+  box-shadow: 0 4px 12px rgba(255, 102, 0, 0.15);
+
+  overflow: hidden;
+}
+
+
+.meeting-table th,
+.meeting-table td {
+  padding: 12px 16px;
+
+  text-align: left;
+
+  font-size: 0.95rem;
+}
+
+
+.meeting-table th {
+  background-color: #2b2b2b;
+
+  color: #ff6600;
+
+  font-weight: 600;
+}
+
+
+.meeting-table td {
+  color: #e0e0e0;
+
+  border-bottom: 1px solid #333;
+}
+
+
+.meeting-table tr:hover {
+  background-color: #2a2a2a;
+}
+
+
+/* =========================================
+   BUTTONS
+   ========================================= */
+
+.edit-btn,
+.delete-btn {
+  margin-right: 6px;
+
+  padding: 6px 12px;
+
+  border: none;
+
+  border-radius: 4px;
+
+  cursor: pointer;
+}
+
+
+.edit-btn {
+  background-color: #ff6600;
+
+  color: #000;
+}
+
+
+.delete-btn {
+  background-color: #ff6600;
+
+  color: black;
+}
+
+
+.save-btn {
+  background-color: #ff6600;
+
+  color: white;
+
+  padding: 8px 14px;
+
+  border: none;
+
+  border-radius: 4px;
+}
+
+
+.cancel-btn {
+  background-color: #888;
+
+  color: white;
+
+  padding: 8px 14px;
+
+  border: none;
+
+  border-radius: 4px;
+}
+
+
+/* =========================================
+   EDIT POPUP
+   ========================================= */
+
+.edit-popup {
+  margin-top: 30px;
+
+  background-color: #292929;
+
+  padding: 20px;
+
+  max-width: 400px;
+
+  width: 100%;
+
+  border-radius: 8px;
+
+  box-shadow: 0 0 10px rgba(255, 102, 0, 0.3);
+
+  box-sizing: border-box;
+}
+
+
+.edit-popup h3 {
+  margin-bottom: 15px;
+
+  text-align: center;
+}
+
+
+.edit-popup input,
+.edit-popup textarea {
+  width: 100%;
+
+  padding: 10px;
+
+  margin-bottom: 12px;
+
+  border: none;
+
+  border-radius: 5px;
+
+  background-color: #1f1f1f;
+
+  color: #fff;
+
+  box-sizing: border-box;
+}
+
+
+.form-buttons {
+  display: flex;
+
+  justify-content: space-between;
+}
+
+
+.no-meetings {
+  text-align: center;
+
+  color: #aaa;
+
+  margin-top: 40px;
+}
+
+
+/* =========================================
+   ANIMATION
+   ========================================= */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 768px) {
+
+  .dashboard-content {
+    max-width: 100%;
+
+    padding: 30px 15px;
+  }
+
+
+  .title {
+    font-size: 2rem;
+  }
+
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+
+  .table-wrapper {
+    max-width: 100%;
+  }
+}
+
