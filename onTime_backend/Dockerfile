@@ -9,4 +9,4 @@ RUN ./mvnw clean package -DskipTests
 
 EXPOSE 8080
 
-CMD ["sh", "-c", "java -jar target/*.jar"]git add onTime_backend/Dockerfile
+CMD ["sh", "-c", "java -jar target/*.jar"]
